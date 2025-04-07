@@ -22,7 +22,7 @@
       transition: transform 0.2s ease;
       filter: drop-shadow(2px 2px 4px #03460618);
     }
-    
+
     @media (max-width: 768px) {
       .socialbtns .fa {
         width: 30px;
@@ -40,13 +40,13 @@
   <script>
     // Load the JSON data
     d3.json('liquor.json').then(data => {
-      const width = 1928;
+      const width = 2228;
       const height = width;
       const cx = width * 0.5;
       const cy = height * 0.5;
 
       const tree = d3.cluster()
-          .size([2 * Math.PI, Math.min(width, height) / 3 - 30])
+          .size([2 * Math.PI, Math.min(width, height) / 4 - 30])
           .separation((a, b) => (a.parent == b.parent ? 1 : 1) / a.depth);
 
       const root = tree(d3.hierarchy(data)
@@ -54,7 +54,7 @@
 
       // Calculate the radius based on the maximum depth of the parent nodes
       const maxParentDepth = d3.max(root.descendants(), d => d.children ? d.depth : d.parent.depth);
-      const radius = Math.min(width, height) / 3 - 30;
+      const radius = Math.min(width, height) / 2 - 30;
       const circleRadius = (radius / (maxParentDepth + 1)) * maxParentDepth;
 
       const svg = d3.create("svg")
