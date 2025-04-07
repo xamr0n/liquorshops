@@ -1,6 +1,6 @@
 {
     "name": "l",
-    "icon": "liquor_shops.png",
+    "icon": "",
     "children": [
       {
         "name": ".",
@@ -634,7 +634,8 @@
             "url": "https://www.google.com/maps/place/African+%2B+Eastern+-+Salam/data=!4m7!3m6!1s0x3e5e6636bbadac7d:0x2be1553ab8f7a28b!8m2!3d24.4784693!4d54.3840916!16s%2Fg%2F11bbwpbj3f!19sChIJfaytuzZmXj4Ri6L3uDpV4Ss?authuser=0&hl=en&rclk=1"
           }
         ]
-      },{
+      },
+      {
         "name": ".",
         "children": [
           {
